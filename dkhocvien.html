@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Form Đăng Ký Học Viên</title>
+</head>
+<h1 style="color: white;background-color: red;text-align: center"> SỞ THÍCH CỦA BẠN </h1>
+<body> <div style="width: 10000px; height:300px; background-color: cyan">
+<form method="get" action="dkhocvien.html" >
+    <br><span style="color: darkblue">Họ và tên </span>
+    <input type="text" name="yourname" size="10"/><br/>
+    <br><span style="color: darkblue">Email</span>
+    <input type="text" name="email"  size="8"/><br/>
+    <br>Sở thích <table  style="border-collapse: collapse;color: orange" >  <tr>
+    <td><label><input name="hobby" value="sport" type="checkbox" /> Thể thao</label></td>
+    <td><label><input name="hobby" value="music" type="checkbox" /> Âm nhạc </label></td>
+        <td><label><input name="hobby" value="readbook" type="checkbox" /> Đọc sách </label></td>
+        </tr>
+    <tr>
+    <td><label><input name="hobby" value="surfinternet" type="checkbox"/> Lướt web</label></td>
+    <td><label><input name="hobby" value="playgame" type="checkbox"/> Chơi game</label></td>
+    <td><label><input name="hobby" value="cinema" type="checkbox"/> Điện ảnh</label><br/></td>
+    </tr>
+        <td><label><input name="hobby" value="travel" type="checkbox"/> Du lịch</label></td>
+    </tr>
+    </table>
+
+</form>
+
+<br>
+    <input type="button" name="infoSubmit" value="Gửi thông tin">
+    <input type="reset" value="Nhập lại">
+</div>
+<style>
+    .wufoo{
+        font-family: Arial;
+    }
+</style>
+</body>
+</html>
