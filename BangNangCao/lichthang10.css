@@ -1,0 +1,39 @@
+caption{
+    color: blue;
+    font-weight: bold;
+    font-size: larger;
+    font-size: 20px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    min-height: 300px;
+    text-align: center;
+}
+th{
+    background-color: orange;
+    border-color: white;
+    color: white;
+}
+td{
+    font-weight: bold;
+}
+sub{
+    color: black;
+}
+.day{
+    border-right-style: hidden;
+    border-left-style: hidden;
+}
+.sun {
+    color: red;
+}
+.Sat {
+    color: blue;
+}
+.Sun {
+    background-color: red;
+}
+.sat {
+    background-color: blue;
+}
