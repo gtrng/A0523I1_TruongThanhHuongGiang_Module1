@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Tiền Tệ</title>
+</head>
+<body>
+<form>
+    <table cellpadding="10">
+        <tr>
+            <th>Amount
+            <th/>
+            <th>From Currency
+            </th>
+            <th>To Currency
+            </th>
+        <tr/>
+        <tr>
+            <td><input value=" " id="value"/>
+            </td>
+            <td></td>
+            <td>
+                <select id="from">
+                    <option value="dong">Đồng</option>
+                    <option value="usd">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="to">
+                    <option value="usd">USD</option>
+                    <option value="dong">Đồng</option>
+                </select>
+            </td>
+            <td>
+                <button type="button"  onclick="myfunction()">Convert</button>
+            </td>
+        </tr>
+        <td>
+            <p id="result"> </p>
+        </td>
+    </table>
+</form>
+<script src="myfunction.js">
+
+</script>
+</body>
+<style>
+    table{
+        width: 100%;
+        text-align: center ;
+        border-style: hidden;
+    }
+</style>
+</html>
