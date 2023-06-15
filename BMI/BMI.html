@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ Số Khối Cơ Thể BMI</title>
+    <link rel="stylesheet" href="bmi.css" />
+</head>
+<h1> BODY MASS INDEX - BMI</h1>
+<body>
+<table>
+    <tr>
+        <th> Weight(kg) </th>
+        <th> Height(m)</th>
+        <th> BMI</th>
+    </tr>
+        <td>
+            <input type=" " id="weight" name="weight"  placeholder="Your Weight" />
+        </td>
+    <td>
+        <input type=" "  id="height" name="height" placeholder="Your Height" >
+    </td>
+    <td>
+        <button type="button" onclick="BMI()">Calculate</button>
+    </td>
+</table>
+<br/>
+<p id="result"></p>
+<p id="interpretation"> </p>
+<script src="bmi_calculator.js"></script>
+</body>
+</html>

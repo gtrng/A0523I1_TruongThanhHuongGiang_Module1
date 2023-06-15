@@ -1,0 +1,19 @@
+h1 {
+    background-color: #2e96ef;
+    color: white;
+    font-family: monospace;
+
+}
+table {
+    width: 50%;
+}
+th {
+    background-color: #2e96ef;
+    color: white;
+}
+td {
+    align-content: center;
+}
+p {
+    color: #1985ef;
+}
