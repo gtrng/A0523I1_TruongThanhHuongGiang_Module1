@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator2.css">
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="4">
+            <input type=" " id="number"  placeholder="Enter number" size="60px" align="left"/>
+        </th>
+    </tr>
+
+    <tr>
+        <td>
+            <button type="button" value="1" onclick="enterVal(1)">1</button>
+        </td>
+        <td>
+            <button type="button" value="2" onclick="enterVal(2)">2</button>
+        </td>
+        <td>
+            <button type="button" value="3" onclick="enterVal(3)">3</button>
+        </td>
+        <td>
+            <button type="button" value="+" onclick="enterVal('+')">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" value="4" onclick="enterVal(4)">4</button>
+        </td>
+        <td>
+            <button type="button" value="5" onclick="enterVal(5)">5</button>
+        </td>
+        <td>
+            <button type="button" value="6" onclick="enterVal(6)">6</button>
+        </td>
+        <td>
+            <button type="button" value="-" onclick="enterVal('-')">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" value="7" onclick="enterVal(7)">7</button>
+        </td>
+        <td>
+            <button type="button" value="8" onclick="enterVal(8)">8</button>
+        </td>
+        <td>
+            <button type="button" value="9" onclick="enterVal(9)">9</button>
+        </td>
+        <td>
+            <button type="button" value="x" onclick="enterVal('x')">x</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" value="C" onclick="clean()">C</button>
+        </td>
+        <td>
+            <button type="button" value="0" onclick="enterVal(0)">0</button>
+        </td>
+        <td>
+            <button type="button" value="=" onclick="click()">=</button>
+        </td>
+        <td>
+            <button type="button" value="/" onclick="enterVal('/')">/</button>
+        </td>
+    </tr>
+</table>
+<script src="Calculator2.js"> </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+table {
+    padding: 5px
+    width: 200px;
+    height: 400px;
+}
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+}
+td {
+    text-align: center;
+}
