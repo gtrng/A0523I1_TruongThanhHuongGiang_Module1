@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Nhập cạnh a : "));
+    let b = parseFloat(prompt("Nhập cạnh b : "));
+    if (a == 0) {
+        alert("Phương trình vô nghiệm");
+    } else if (b == 0) {
+        document.write("Phương trình vô số nghiệm")
+    } else {
+        let x = -b / a;
+        document.write("Phương trình có nghiệm : " + x);
+    }
+</script>
+</body>
+</html>
