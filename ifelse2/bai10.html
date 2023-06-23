@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bài 10</title>
 </head>
 <body>
-
+<script>
+    let dienTieuThu = parseFloat(prompt("Nhập lượng điện đã tiêu thụ:"));
+    let tienDien = parseFloat(tienDien);
+    let bac1 = 1728, bac2 = 1786, bac3 = 2074, bac4 = 2612, bac5 = 2919, bac6 = 3015;
+    if (dienTieuThu < 0) {
+        document.write("Vui lòng nhập lại");
+    }
+    if (dienTieuThu <= 50) {
+        tienDien = dienTieuThu * bac1;
+    } else if (dienTieuThu <= 100) {
+        tienDien = 50 * bac1 + ((dienTieuThu - 50) * bac2);
+    } else if (dienTieuThu <= 200) {
+        tienDien = (50 * bac1) + (50 * bac2) + ((dienTieuThu - 100) * bac3);
+    } else if (dienTieuThu <= 300) {
+        tienDien = (50 * bac1) + (50 * bac2) + (100 * bac3) + ((dienTieuThu - 200) * bac4);
+    } else if (dienTieuThu <= 400) {
+        tienDien = (50 * bac1) + (50 * bac2) + (100 * bac3) + (100 * bac4) + ((dienTieuThu - 300) * bac5);
+    } else if (dienTieuThu > 400) {
+        tienDien = (50 * bac1) + (50 * bac2) + (100 * bac3) + (100 * bac4) + (100 * bac5) + ((dienTieuThu - 400) * bac6);
+    }
+    document.write(tienDien);
+</script>
 </body>
 </html>
