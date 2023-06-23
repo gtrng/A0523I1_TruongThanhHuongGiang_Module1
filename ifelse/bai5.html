@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phân loại học lực</title>
+</head>
+<body>
+<script>
+    let test = parseFloat(prompt("Nhập điểm kiểm tra"));
+    let midterm = parseFloat(prompt("Nhập điểm giữa kỳ"));
+    let final = parseFloat(prompt("Nhập điểm cuối kì"));
+    let average = (test + midterm + final) / 3;
+    if (average >= 9) {
+        alert("A");
+    } else if (average >= 8) {
+        alert("B");
+    } else if (average >= 7) {
+        alert("C");
+    } else if (average >= 5) {
+        alert("D");
+    } else if (average < 5) {
+        alert("F");
+    } else {
+        alert("không hơp lệ!");
+    }
+</script>
+</body>
+</html>

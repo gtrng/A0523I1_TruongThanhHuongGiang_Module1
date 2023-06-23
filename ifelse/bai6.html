@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doanh số</title>
+</head>
+<body>
+<script>
+    let doanhSo = parseFloat(prompt("Nhập tổng doanh số bán :"));
+    let hoaHong = parseFloat(hoaHong);
+    if( doanhSo <= 100){
+        hoaHong = doanhSo * 5 /100;
+    } else if (doanhSo <= 300) {
+        hoaHong = doanhSo * 10 /100;
+    } else if ( doanhSo > 300) {
+        hoaHong = doanhSo * 20 /100;
+    }
+    alert(" Doanh số là : " + doanhSo + " Hoa hồng : " + hoaHong);
+</script>
+</body>
+</html>
