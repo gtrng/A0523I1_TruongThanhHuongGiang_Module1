@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let degree = parseFloat(prompt("Vui lòng nhập nhịp độ cơ thể của bạn vào đây: "));
+    while (degree < 20 || degree > 100 || degree != null) {
+        if (degree < 20) {
+            alert("Vui lòng tăng nhiệt độ");
+            degree = parseFloat(prompt("Nhập lại nhiệt độ : "));
+        } else if (degree > 100) {
+            alert("Vui lòng giảm nhiệt độ");
+            degree = parseFloat(prompt("Nhập lại nhiệt độ : "));
+        } else if (degree != null) {
+            degree = parseFloat(prompt("Nhập lại nhiệt độ : "));
+        }
+    }
+        alert("Nhiệt độ của bạn bình thường");
+</script>
+</body>
+</html>

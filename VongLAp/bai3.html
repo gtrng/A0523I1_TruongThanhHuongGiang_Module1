@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let f = " ";
+    let number1 =0, number2 = 1 , next;
+    for (let i = 1; i<=20; i++){
+        console.log(number1);
+        next = number1 + number2;
+        number1 = number2;
+        number2 = next;
+        f += number1 + " " + "</br>";
+    }
+    document.write(f);
+
+</script>
+</body>
+</html>

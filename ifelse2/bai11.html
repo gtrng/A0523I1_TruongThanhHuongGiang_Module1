@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Viết chương trình tính thuế thu nhập cá nhân</title>
+    <title>Sinh Bảng Cửu Chương</title>
 </head>
 <body>
-
+<script>
+        document.write("<table border=1 width=100%>")
+        for(i=1;i<=9;i++)
+        {
+            document.write("<tr>")
+            for(n=2;n<=9;n++){
+                document.write("<td>" + n + "x" + i +"="+ (n*i) + "</td>");
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>")
+</script>
 </body>
 </html>

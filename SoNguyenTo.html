@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liệt Kê Các Số Nguyên Tố</title>
+</head>
+<body>
+<script>
+    function main() {
+        let numbers = parseInt(prompt("Nhập số lượng số nguyên tố cần in : "));
+        let count = 0;
+        let N =2;
+        while (count < numbers) {
+            if (check(N)) {
+                document.write(N + " ");
+                count++;
+            }
+            N++;
+        }
+    }
+    function check(numbers) {
+        if ( numbers < 2 ){
+            return false;
+        }
+        let check = true;
+            for(let N = 2;N <= Math.sqrt(numbers);N++){
+                if(numbers%N == 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+        main()
+</script>
+</body>
+</html>
