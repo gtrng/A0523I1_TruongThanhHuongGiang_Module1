@@ -6,19 +6,19 @@
 </head>
 <body>
 <script>
-    let degree = parseFloat(prompt("Vui lòng nhập nhịp độ cơ thể của bạn vào đây: "));
-    while (degree < 20 || degree > 100 || degree != null) {
+    let degree = parseFloat(prompt("Vui lòng nhập nhiệt độ cơ thể của bạn :"));
+    while (!degree || degree <20 || degree > 100) {
         if (degree < 20) {
-            alert("Vui lòng tăng nhiệt độ");
-            degree = parseFloat(prompt("Nhập lại nhiệt độ : "));
+            alert("Yêu cầu tăng nhiệt độ");
+            degree = parseFloat(prompt("Vui lòng nhập lại nhiệt độ cơ thể của bạn :"));
         } else if (degree > 100) {
-            alert("Vui lòng giảm nhiệt độ");
-            degree = parseFloat(prompt("Nhập lại nhiệt độ : "));
-        } else if (degree != null) {
-            degree = parseFloat(prompt("Nhập lại nhiệt độ : "));
+            alert("Yêu cầu giảm nhiệt độ");
+            degree = parseFloat(prompt("Vui lòng nhập lại nhiệt độ cơ thể của bạn :"));
+        }else if (!degree) {
+            degree = parseFloat(prompt("Vui lòng nhập lại nhiệt độ cơ thể của bạn :"));
         }
     }
-        alert("Nhiệt độ của bạn bình thường");
+    alert("Nhiệt độ bình thường");
 </script>
 </body>
 </html>
