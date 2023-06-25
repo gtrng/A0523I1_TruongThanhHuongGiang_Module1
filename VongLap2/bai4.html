@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+    let d = parseFloat(prompt("Nhập chiều dài: "));
+    let r = parseFloat(prompt("Nhập chiều rộng: "));
+    for (let i = 1; i <= r; i++) {
+        for (let j = 1; j <= d; j++) {
+            if (i == 1 || j == 1 || i == r || j == d) {
+                document.write("* ");
+            } else {
+                document.write("&nbsp;&nbsp;&nbsp;");
+            }
+        }
+        document.write("</br>");
+    }
+</script>
+</body>
+</html>

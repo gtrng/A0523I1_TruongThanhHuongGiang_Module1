@@ -6,7 +6,56 @@
 </head>
 <body>
 <script>
-
+    function main() {
+        let h = parseFloat(prompt("Nhập chiều cao: "));
+        tamGiacVuong(h);
+        document.write("</br>");
+        tamGiacVuongNguoc(h);
+        document.write("</br>");
+        tamGiacVuong2(h);
+        document.write("</br>");
+        tamGiacVuongNguoc2(h);
+    }
+    function tamGiacVuong(h) {
+        for (let i = 1; i <= h; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write("* ");
+            }
+            document.write("</br>");
+        }
+    }
+    function tamGiacVuongNguoc(h) {
+        for (let i = h; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                document.write("* ");
+            }
+            document.write("</br>");
+        }
+    }
+    function tamGiacVuong2(h) {
+        for (let i = 1; i <= h; i++) {
+            for (let j = 1 ; j <=h; j++) {
+                if(j<= h-i) {
+                    document.write("&ensp; ");
+                } else {
+                    document.write("* ")
+                }
+            }
+            document.write("</br>");
+        }
+    }
+    function tamGiacVuongNguoc2(h) {
+        for (let i = 0; i < h; i++) {
+            for (let j = 0; j < i; j++) {
+                document.write("&ensp; ");
+            }
+            for (let j = i; j < h; j++) {
+                document.write(" *");
+            }
+            document.write("</br>");
+        }
+    }
+    main()
 </script>
 </body>
 </html>
