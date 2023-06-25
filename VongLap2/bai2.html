@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function main() {
+        let numbers = parseInt(prompt("Nhập số lượng số nguyên dương cần in:"));
+            document.write(giaiThua(numbers));
+    }
+    function giaiThua(numbers) {
+        if(numbers === 1){
+            return 1;
+        }
+        for (let i = numbers - 1; i > 0; i--) {
+            numbers *=i;
+        }
+        return (numbers > 0 && numbers%1 == 0);
+    }
+    main()
+</script>
+</body>
+</html>

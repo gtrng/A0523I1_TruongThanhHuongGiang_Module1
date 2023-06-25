@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhập số lượng cần in: "));
+    let f = " ";
+    let sum = 0;
+    let number1 =0, number2 = 1 , next=0;
+    for (let i = 0 ; i<=n; i++){
+        if (i <= 1) {
+            next = i;
+        } else {
+            next = number1 + number2;
+            number1 = number2;
+            number2 = next;
+        }
+        f += next + " " + "</br>";
+    }
+    document.write("Dãy fibonacci :" + "</br>" +f);
+</script>
+</body>
+</html>
