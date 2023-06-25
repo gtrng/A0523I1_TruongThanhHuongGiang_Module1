@@ -7,19 +7,20 @@
 <body>
 <script>
     let f = " ";
-    let number1 =0, number2 = 1 , next;
-    for (let i = 1; i<=20; i++){
-        console.log(number1);
-        next = number1 + number2;
-        number1 = number2;
-        number2 = next;
-        f += number1 + " " + "</br>";
+    let number1 =0, number2 = 1 , next=0;
+    for (let i = 0 ; i<=20; i++){
+        if (i <= 1) {
+            next = i;
+        } else {
+            next = number1 + number2;
+            number1 = number2;
+            number2 = next;
+        }
         if (next%5 ==0){
-            f = next;
-            break;
+            f += next + " ";
         }
     }
-    document.write(c);
+    document.write("Số chia hết cho 5 trong dãy :" +f);
 </script>
 </body>
 </html>
