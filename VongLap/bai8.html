@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game: Hãy thử đoán xem! </title>
+</head>
+<form id="game">
+<table border="1">
+    <td>
+        <input type="button" id="play" value="CHƠI"/>
+    </td>
+    <td>
+        <input type="button" id="reset" value="RESET" />
+    </td>
+</table>
+</form>
+<script>
+    let playIPT = document.getElementById("play");
+    playIPT.onclick = function () {
+        play();
+    }
+    let resetIPT = document.getElementById("reset");
+    resetIPT.onclick = function () {
+        reset();
+    }
+    function play() {
+        let numbers = Number(prompt("Nhập khoảng bạn muốn đoán vào đây 0 - ...: "));
+        let randomNumber;
+        let choose = Number(prompt("Nhập số bạn muốn đoán vào đây: "));
+        if(numbers) {
+            randomNumber = Math.floor(Math.random() * numbers);
+        }
+            if (randomNumber == choose) {
+                alert("Chúc mừng bạn đã đoán đúng!");
+            } else {
+            while( randomNumber !== choose){
+                alert("Bạn đã đoán sai! " + randomNumber);
+                choose = Number(prompt("Nhập số bạn muốn đoán vào đây: "));
+            }
+            alert("Chúc mừng bạn đã đoán đúng");
+        }
+    }
+    function reset() {
+        const element = document.getElementById("game");
+        element.reset();
+
+    }
+</script>
+</body>
+</html>
