@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+    //bai1
+    myColor = ["Red", "Green", "White", "Black"];
+    document.write(myColor.toString());
+    document.write("</br>");
+
+
+    //bai2
+    let numbers = prompt("Nhập một dãy số: ");
+    let num = numbers.toString();
+    let result = [num[0]];
+    for ( let i=1; i< num.length; i++){
+        if((num[i-1] % 2 ===0) && (num[i]%2 ===0)){
+            result.push("-",num[i]);
+        } else {
+            result.push(num[i]);
+        }
+    }
+    document.write(result.join(" "));
+    document.write("</br>");
+
+
+    //bai3
+    let word = prompt("Nhập tiêu đề bạn muốn hiện: ");
+    let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let result = [];
+    for(let i=0; i<word.length; i++)
+    {
+        if(UPPER.indexOf(word[i]) !== -1)
+        {
+            result.push(word[i].toLowerCase());
+        }
+        else
+        {
+            result.push(word[i].toUpperCase());
+        }
+    }
+    document.write(result.join(''));
+
+</script>
+</body>
+</html>
