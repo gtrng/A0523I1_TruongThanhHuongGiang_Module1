@@ -6,9 +6,15 @@
 </head>
 <body>
 <script>
-    function f() {
-
+    function giaiThua(n) {
+        if( n == 1){
+            return 1;
+        }
+        return n * giaiThua(n-1);
     }
+    let n = +prompt("Nhap n");
+    let result = giaiThua(n);
+    document.write(result);
 </script>
 </body>
 </html>
