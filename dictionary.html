@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+    <script>
+        let findWord = prompt("Nhập từ tiếng anh cần tìm:");
+        let eng = ["hello", "road", "condition", "word"];
+        let vie = ["xin chào", "con đường", "điều kiện", "từ"];
+        function find() {
+            let index = -1;
+            for (let i = 0; i < eng.length; i++) {
+                if (eng[i] == findWord) {
+                    index = i;
+                }
+            }
+            if (index != -1) {
+                alert(vie[index]);
+            } else {
+                alert("không tìm thấy");
+            }
+        }
+    </script>
+</body>
+</html>

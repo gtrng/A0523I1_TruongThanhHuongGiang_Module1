@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let arr1 = "mot hai ba";
+    let arr2 = Array('u', 'e', 'o', 'a', 'i');
+    let index = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] == arr2[j]) {
+                index++;
+            }
+        }
+    }
+    document.write("số nguyên âm trong chuỗi là: " + index);
+</script>
+</body>
+</html>
