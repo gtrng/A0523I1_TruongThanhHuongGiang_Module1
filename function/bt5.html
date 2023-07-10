@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    function findStar() {
+        let arr = prompt("Nhập sao muốn tìm :");
+        for (let i = 0 ;i < arr1.length; i++) {
+            if (arr == arr1[i]) {
+                arr = i;
+                break;
+            } else if (arr != arr1[i]) {
+                document.write("Không có sao cần tìm");
+                break;
+            }
+        }
+        return arr;
+    }
+
+    function main() {
+        let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        document.write("Chòm sao cần tìm là :" + arr2[findStar()])
+    }
+main();
+</script>
+</body>
+</html>
