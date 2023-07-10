@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập một số a bất kỳ :");
+    let b = +prompt("Nhập một số b bất kỳ : ");
+    let c = +prompt("Nhập một số c bất kỳ : ");
+    function min3Number(a,b,c) {
+        let min;
+        min = a;
+        if( a >= b && c >= b){
+            min = b;
+        } else if ( a >= c){
+            min = c;
+        }
+        return min;
+    }
+    let result = min3Number(a,b,c);
+    document.write(result);
+</script>
+</body>
+</html>
