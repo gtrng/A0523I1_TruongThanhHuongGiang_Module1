@@ -6,18 +6,19 @@
 </head>
 <body>
 <script>
-    function reverse(a) {
-        for(let i = a.length - 1; i>=0 ;i--){
-            b.push(a[i]);
-        }
-    }
     function main(){
-        let a = new Array(10);
-        a = prompt("Nhập chuỗi:");
-        let b;
-        let result = reverse(a);
-        document.write(result);
+        let a = [2,3,4,5,6];
+        let b = reverse(a);
+        document.write(b);
     }
+    function reverse(input) {
+        let newArr = new Array;
+        for(let i = input.length - 1; i >= 0 ;i--){
+            newArr.push(input[i]);
+        }
+        return newArr;
+    }
+    main();
 </script>
 </body>
 </html>

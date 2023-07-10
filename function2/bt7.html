@@ -11,12 +11,14 @@
         temp = a;
         a = b;
         b = temp;
+        return [a,b];
     }
     function main() {
         let a = Number(prompt("Nhập một số nguyên a bất kỳ:"));
         let b = Number(prompt("Nhập một số nguyên b bất kỳ: "));
-        swap(a,b);
-        document.write("Sau khi doi : " + a +" "+ b);
+        let result = swap(a,b);
+        document.write("</br>");
+        document.write(result);
     }
     main();
 

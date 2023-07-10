@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+    
+    function main() {
+        let a = [ "love you" ];
+        let b = ["o"];
+        let result = check(a,b);
+        document.write(result);
+    }
+    function check(input,b) {
+        let count = 0;
+        for(let i =0; i < input.length ; i++){
+            if(input[i] == b[0]){
+                count++;
+            } else {
+                return -1;
+            }
+        }
+        return count;
+    }
+    main();
+</script>
+</body>
+</html>
