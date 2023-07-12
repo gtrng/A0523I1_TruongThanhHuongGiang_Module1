@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    function Temperature(doC,doF,doK) {
+        this.C = doC;
+        this.F = doF;
+        this.K = doK;
+        this.setdoC = function (doC) {
+            this.C = doC;
+        };
+        this.getdoC = function () {
+            return C;
+        };
+        this.setdoF = function (doF) {
+            this.F = doF;
+        };
+        this.getdoF = function () {
+            return F;
+        };
+        this.setdoK = function (doK) {
+            this.K = doK;
+        };
+        this.getdoK = function () {
+            return K;
+        };
+        this.changeCF = function () {
+            return this.F = this.C * 9/5 + 32;
+        };
+        this.changeCK = function () {
+            return this.K = this.C + 273.15;
+        };
+    }
+    let temp = new Temperature(25);
+    alert("Chuyển từ độ C sang độ F : " + temp.changeCF());
+    alert("Chuyển từ độ C sang độ K : " + temp.changeCK());
+</script>
+</body>
+</html>
