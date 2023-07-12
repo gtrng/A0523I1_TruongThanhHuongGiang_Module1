@@ -6,23 +6,23 @@
 </head>
 <body>
 <script>
-    
     function main() {
-        let a = [ "love you" ];
-        let b = ["o"];
-        let result = check(a,b);
-        document.write(result);
+        let a = ["h", "e", "l", "l", "o", "w", "o", "r", "l", "d"];
+        let count = check(a, "o");
+        document.write("Phần tử xuất hiện trong mảng " + count + " lần");
     }
-    function check(input,b) {
+    function check(a, x) {
         let count = 0;
-        for(let i =0; i < input.length ; i++){
-            if(input[i] == b[0]){
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] == x[0]) {
                 count++;
-            } else {
-                return -1;
             }
         }
-        return count;
+        if (count > 0) {
+            return count;
+        } else {
+            return -1;
+        }
     }
     main();
 </script>
