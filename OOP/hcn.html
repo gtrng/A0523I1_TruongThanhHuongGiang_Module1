@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình Chữ Nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="1000" style="border: black" >
+</canvas>
+<script>
+    let canvas = document.getElementById("myCanvas");
+    if (canvas.getContext) {
+        let ctx = canvas.getContext("2d");
+        ctx.strokeRect(10, 20, 100, 50);
+    }
+
+    function Rectangle(width, length) {
+        this.w = width;
+        this.l = length;
+        this.setWidth = function (width) {
+            this.w = width;
+        };
+        this.getWidth = function () {
+            return w;
+        };
+        this.setLength = function (length) {
+            this.l = length;
+        };
+        this.getLength = function () {
+            return l;
+        };
+        this.area = function () {
+            return this.w * this.l;
+        };
+        this.perimeter = function () {
+             return (this.w + this.l) / 2;
+        };
+    }
+    let rec = new Rectangle(50, 100);
+    alert("Diện tích hình chữ nhật là : " + rec.area());
+    alert("Chu vi hình chữ nhật là : " + rec.perimeter());
+</script>
+</body>
+</html>
