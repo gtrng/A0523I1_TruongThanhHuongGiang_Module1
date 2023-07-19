@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+        get getWeight() {
+            return this.weight;
+        }
+        decrease() {
+                this.weight = this.weight - 1;
+        }
+        isEmpty(){
+            if (this.weight == 0){
+                return "Empty";
+            } else {
+                return this.weight;
+            }
+        }
+    }
+    class Human {
+        constructor(name,gender,Hweight,) {
+            this.name = name;
+            this.gender = gender;
+            this.Hweight = Hweight;
+        }
+        get getName(){
+            return this.name;
+        }
+        set setName(name){
+            this.name = name;
+        }
+        get getHWeight(){
+            return this.Hweight;
+        }
+        set setHWeight(Hweight){
+            this.Hweight = Hweight;
+        }
+        isMale() {
+            return this.gender == "Male";
+        }
+        setGender(){
+            if (this.isMale() == true){
+                return "Male";
+            } else {
+                return "Female";
+            }
+        }
+        say(){
+            document.write("Xin chào");
+        }
+
+       checkApple(apple){
+            if(apple.isEmpty() == true){
+                document.write("Không có táo");
+            }else {
+                document.write("Có táo");
+            }
+       }
+       eat(apple){
+            if(apple.weight > 0){
+                apple.decrease();
+                this.Hweight = this.Hweight + 1;
+                document.write("Cân nặng còn lại của người là :" + this.Hweight + "</br>" + "Cân táo còn lại là " + apple.getWeight);
+            } else {
+                document.write("Không có táo ăn");
+            }
+       }
+    }
+    let Adam = new Human("Adam","Male",60);
+    let Eva = new Human("Eva","Female",50);
+    let apple = new Apple(10);
+    //Adam.say();
+    //Adam.checkApple(apple);
+    Adam.eat(apple);
+
+
+</script>
+</body>
+</html>
