@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function tamGiacVuongCan() {
+    //     let h = prompt("Nhập h :");
+    //     for (let i = 1; i <= h; i++) {
+    //         for (let j = 1; j <= h; j++) {
+    //             if (i == h || j == 1 || i == j) {
+    //                 document.write("* ");
+    //             } else {
+    //                 document.write("&nbsp;&nbsp;&nbsp;");
+    //             }
+    //         }
+    //         document.write("</br>");
+    //     }
+    // }
+    // tamGiacVuongCan();
+    function tamGiacCanRong() {
+        let h = prompt("Nhập h :");
+        let m = h, n = h;
+        for(let i =1; i <= h ; i++){
+            for(let j = 1; j <= 2*h -1; j++){
+                if( i == h || j == m || j == n){
+                    document.write("* ");
+                }else {
+                    document.write("&nbsp;&nbsp;&nbsp;");
+                }
+            }
+            m--;
+            n++;
+            document.write("</br>");
+        }
+    }
+    tamGiacCanRong();
+    function tamGiacCan() {
+        let h = prompt("Nhập h :");
+        let m = h, n = h;
+        for(let i =1; i <= h ; i++){
+            for(let j = 1; j <= 2*h -1; j++){
+                if( j >= m && j <=n){
+                    document.write("* ");
+                }else {
+                    document.write("&nbsp;&nbsp;&nbsp;");
+                }
+            }
+            m--;
+            n++;
+            document.write("</br>");
+        }
+    }
+    tamGiacCan();
+</script>
+</body>
+</html>

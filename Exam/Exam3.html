@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1><strong style="font-size: 30px" > Xây dựng hệ thống quản lý học viên Codegym </strong></h1>
+<body>
+</br>
+<form>
+    <table>
+        <td>
+            <button type="button" onclick="addInfo()">Thêm mới học viên</button>
+        </td>
+        <td>
+            <button type="button" onclick="edit()"> Sửa thông tin học viên</button>
+        </td>
+        <td>
+            <button type="button" onclick="deleteStudent()">Xóa học viên</button>
+        </td>
+    </table>
+    <br>
+
+    <table border="1" width="100%">
+        <tr>
+            <th>Mã học viên</th>
+            <th>Tên</th>
+            <th>Lớp</th>
+            <th>Email</th>
+            <th>Ngày sinh</th>
+        </tr>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+</form>
+<script>
+
+    class Student{
+        constructor(id,name,className,email,date) {
+            this.id = id;
+            this.name = name;
+            this.className = className;
+            this.email = email;
+            this.date = date;
+        }
+        setId(id){
+            this.id = id;
+        }
+        getId(){
+            return this.id;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getName(){
+            return this.name;
+        }
+        setClassName(className){
+            this.className = className;
+        }
+        getClassName(){
+            return this.className;
+        }
+        setEmail(email){
+            this.email = email;
+        }
+        getEmail(){
+            return this.email;
+        }
+        setDate(date){
+            this.date = date;
+        }
+        getDate(){
+            return this.date;
+        }
+    }
+    let student = new Student();
+    var studentList = [];
+    function addInfo() {
+        let id = prompt("Nhập ID của sinh viên");
+        let name = prompt("Nhập tên của học sinh :");
+        let className = prompt("Nhập tên lớp :");
+        let email = prompt("Nhập email :");
+        let date = prompt("Nhập ngày tháng năm sinh :");
+        let student = new Student(id,name,className,email,date);
+        studentList.push(student);
+        show();
+    }
+    function show() {
+        let list = "";
+        for(let i = 0; i < studentList.length; i++){
+            list += "<tr>" + " <td>"+ "HV-00" +(studentList[i].id) +"</td> " +
+                "<td>" + (studentList[i].name) + "</td>" +
+                "<td>"+(studentList[i].className)+"</td>"+
+                " <td>"+(studentList[i].email)+ "@gmail.com"+ "</td>"+
+                "<td>"+(studentList[i].date)+"</td>"+
+                "</tr>";
+        }
+        document.getElementById("tableBody").innerHTML = list;
+    }
+    function edit() {
+        let isExisted = false;
+        let id = prompt("Nhập mã sinh viên cần sửa :");
+        for(let i =0; i < studentList.length;i++){
+            if(studentList[i].id === id){
+                isExisted = true;
+                studentList[i].setName(prompt("Nhập lại tên:"));
+                studentList[i].setClassName(prompt("Nhập lại lớp:"));
+                studentList[i].setEmail(prompt("Nhập lại email:"));
+                studentList[i].setDate(prompt("Nhập lại ngày tháng năm sinh:"));
+                break;
+            }
+        }
+        if(isExisted == false){
+            alert("Mã hoc sinh không tồn tại!");
+        } else {
+            show();
+        }
+    }
+    function deleteStudent() {
+        let isExisted = false;
+        let id = prompt("Nhập mã sinh viên cần xóa :");
+        for(let i =0; i < studentList.length;i++) {
+            if (studentList[i].id === id) {
+                isExisted = true
+                var deleteBox = confirm("Có xóa sinh viên này hay không ?");
+                if(deleteBox){
+                    for(let j = i; j < studentList.length -1;j++){
+                        studentList[j] = studentList[1+j];
+                        studentList.length--;
+                    }
+                    alert("Đã xóa học sinh !");
+                    break;
+                } else {
+                    alert("Bạn đã hủy xóa học sinh này")
+                }
+            }
+        }
+        if(isExisted == false){
+            alert("Mã học sinh không tồn tại!");
+        } else
+            show();
+        }
+    }
+</script>
+
+</body>
+</html>
