@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    function sumEven(arr) {
+        let n = prompt("Nhập row");
+        let m = prompt("Nhập col");
+        let sum = 0;
+        for (let i =0; i < n; i++) {
+            arr[i] = [];
+            for (let j =0; j < m ; j++) {
+                arr[i][j] = Math.floor((Math.random()*10)+1);
+                if (arr[i][j] % 2 === 0) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        console.log(sum);
+    }
+    sumEven(arr);
+</script>
+</body>
+</html>

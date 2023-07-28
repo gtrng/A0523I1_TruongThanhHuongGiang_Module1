@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function differentSymbolsNaive() {
+    //     let str = prompt("nhập chuỗi kí tự");
+    //     let newStr = str.toLowerCase();
+    //     arr = [...new Set([...newStr])];
+    //     console.log(arr.length);
+    // }
+    // differentSymbolsNaive();
+
+    function commonCharacterCount() {
+        let count =0;
+        let str1 = prompt("nhập chuỗi kí tự 1");
+        let str2 = prompt("nhập chuỗi kí tự 2");
+        let newStr1 = str1.toLowerCase();
+        let newStr2 = str2.toLowerCase();
+        for(let i =0; i < newStr1.length ; i++){
+            for(let j =0; j < newStr2.length ; j++){
+                if(newStr1[i] == newStr2[j]){
+                    count += 1;
+                }
+            }
+        }
+        console.log(count);
+    }
+    commonCharacterCount();
+</script>
+</body>
+</html>

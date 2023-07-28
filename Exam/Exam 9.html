@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function normal() {
+        let str = prompt("Nhập chuỗi kí tự :");
+        arr = str.split(" ");
+        let res = "", temp;
+        for(let i = 0; i < arr.length; i++){
+            temp = arr[i].trim().toLowerCase();
+            if(temp != ""){
+                temp = temp.substr(0,1).toUpperCase() + temp.substr(1);
+                res += temp + " ";
+            }
+        }
+        document.write(res.trim());
+    }
+    normal();
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <strong style="align: center">MENU</strong>
+    <ul style="list-style-type: none">
+        <li>1/Cafe</li>
+        <li>2/Cam vắt</li>
+        <li>3/Nước ép cà rốt</li>
+        <li>4/Nước ép cà chua</li>
+        <li>5/Nước lọc</li>
+        <li>6/Nước</li>
+        <li>7/Dừng gọi món</li>
+        <li> </br> </li>
+        <li>Nhập tên nước muốn gọi :</li>
+        <input type=" " id="select">
+    </ul>
+</form>
+<script>
+        const select = document.getElementById("select").value;
+        do {
+            if (select === 1) {
+                alert("Bạn đã chọn cafe");
+                alert("Số tiền bạn phải thanh toán là 10000");
+            } else if (select === 2) {
+                alert("Bạn đã chọn cam vắt");
+                alert("Số tiền bạn phải thanh toán là 10000");
+            }else if (select === 3) {
+                alert("Bạn đã chọn nước ép cà rốt");
+                alert("Số tiền bạn phải thanh toán là 10000");
+            } else if (select === 4) {
+                alert("Bạn đã chọn nước ép cà chua");
+                alert("Số tiền bạn phải thanh toán là 10000");
+            } else if (select === 5) {
+                alert("Bạn đã chọn nước lọc");
+                alert("Số tiền bạn phải thanh toán là 10000");
+            } else if (select === 6) {
+                alert("Bạn đã chọn nước dừa");
+                alert("Số tiền bạn phải thanh toán là 10000");
+            }else if (select === 7) {
+                alert("Bạn đã chọn dừng gọi món");
+                break;
+            }
+        } while (select >= 1 && select <= 7);
+
+</script>
+</body>
+</html>
